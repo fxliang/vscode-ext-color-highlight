@@ -16,8 +16,6 @@ import { findWords } from './strategies/words';
 import { DecorationMap } from './lib/decoration-map';
 import { dirname } from 'path';
 
-const colorWordsLanguages = ['css', 'scss', 'sass', 'less', 'stylus'];
-
 export class DocumentHighlight {
 
   /**
@@ -39,7 +37,7 @@ export class DocumentHighlight {
       this.strategies.push(findHexRGBA);
     }
 
-    if (colorWordsLanguages.indexOf(document.languageId) > -1 || viewConfig.matchWords) {
+    if (viewConfig.matchWords) {
       this.strategies.push(findWords);
     }
 
