@@ -3,6 +3,11 @@
 
 ## [Unreleased]
 
+## [2.6.1] - 2023-02-15
+
+### Removed
+- Overrides so your highlight preferences in settings will always be obeyed
+
 ## [2.6.0]
 
 ### Added
