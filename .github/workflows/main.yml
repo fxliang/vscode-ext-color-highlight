@@ -20,6 +20,7 @@ jobs:
       - run: rm package-lock.json
       #- run: npm --no-git-tag-version version 1.0.${{ github.run_number }}
       - run: npm install @types/vscode
+      - run: npm fund
       - run: yarn add @types/vscode@1.70.0
       - run: npm install
         env:
