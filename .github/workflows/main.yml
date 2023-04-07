@@ -19,7 +19,7 @@ jobs:
           registry-url: "https://npm.pkg.github.com"
       - run: rm package-lock.json
       #- run: npm --no-git-tag-version version 1.0.${{ github.run_number }}
-      - run: npm install @types/vscode vscode-test
+      - run: npm install @types/vscode@1.77.1
       - run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
