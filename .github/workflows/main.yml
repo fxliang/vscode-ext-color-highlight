@@ -17,6 +17,7 @@ jobs:
           node-version: 16
           cache: "npm"
           registry-url: "https://npm.pkg.github.com"
+      - run: npm install
       - run: npm ci
       - run: npm run package
       - uses: actions/upload-artifact@v3
