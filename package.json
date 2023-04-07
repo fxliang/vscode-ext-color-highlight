@@ -23,7 +23,7 @@
     "build": "webpack --mode development",
     "vscode:prepublish": "webpack --mode production",
     "dev": "webpack --mode development -w",
-    "postinstall": "node ./node_modules/vscode/bin/install",
+    
     "force-resolutions": "npx npm-force-resolutions",
     "test": "node ./node_modules/vscode/bin/test"
   },
