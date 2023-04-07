@@ -1,9 +1,9 @@
 {
-  "name": "color-highlight-fork",
+  "name": "color-highlight-fork-fork",
   "displayName": "Color Highlight",
   "description": "Highlight web colors in your editor",
   "version": "2.6.1",
-  "publisher": "mikekscholz",
+  "publisher": "fxliang",
   "license": "GPL-3.0",
   "engines": {
     "vscode": "^1.57.0"
@@ -27,13 +27,10 @@
     "force-resolutions": "npx npm-force-resolutions",
     "test": "node ./node_modules/vscode/bin/test"
   },
-  "bugs": {
-    "url": "https://github.com/mikekscholz/vscode-ext-color-highlight/issues"
-  },
-  "homepage": "https://github.com/mikekscholz/vscode-ext-color-highlight",
+  "homepage": "https://github.com/fxliang/vscode-ext-color-highlight",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mikekscholz/vscode-ext-color-highlight.git"
+    "url": "https://github.com/fxliang/vscode-ext-color-highlight.git"
   },
   "browser": "./dist/extension-web.js",
   "main": "./dist/extension-node.js",
@@ -59,10 +56,15 @@
           "description": "Highlight color words in all files (grey, green, etc.)",
           "type": "boolean"
         },
-        "color-highlight.useARGB": {
-          "default": false,
-          "description": "Highlight HEX values using ARGB instead of RGBA (default)",
-          "type": "boolean"
+        "color-highlight.colorFormat": {
+          "default": "RGBA",
+          "description": "Highlight HEX values format",
+          "type": "string",
+          "enum": [
+            "RGBA",
+            "ARGB",
+            "ABGR"
+          ]
         },
         "color-highlight.matchRgbWithNoFunction": {
           "default": false,
