@@ -1,0 +1,11 @@
+{
+  "color-highlight.enable": "啟用顏色高亮",
+  "color-highlight.languages": "要高亮的語言（\"*\" 表示全部，\"!lang\" 表示排除）",
+  "color-highlight.matchWords": "高亮顏色名稱（如 '紅色'、'藍色'）",
+  "color-highlight.markerType": "高亮樣式",
+  "color-highlight.markRuler": "在滾動條顯示顏色",
+  "color-highlight.colorFormat": "HEX 顏色格式",
+  "color-highlight.matchRgbWithNoFunction": "高亮裸 RGB 值（不帶 rgb()）",
+  "color-highlight.rgbWithNoFunctionLanguages": "裸 RGB 高亮的語言",
+  "color-highlight.sass.includePaths": "Sass 引用路徑"
+}

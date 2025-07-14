@@ -3,7 +3,7 @@ name: Build Preview version
 on:
   push:
     branches:
-      - "*"
+      - '**'
   workflow_dispatch:
 
 jobs:
@@ -12,14 +12,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16
-          cache: "npm"
-          registry-url: "https://npm.pkg.github.com"
-      - run: npm install
+          node-version: 22
+          cache: npm
+
       - run: npm ci
-      - run: npm run package
+
+      - run: npm run vscode:prepublish
+
+      - run: npm install -g vsce
+
+      - run: vsce package --allow-missing-repository --allow-star-activation
+
       - uses: actions/upload-artifact@v3
         with:
-          path: ./*color-highlight*.vsix
+          path: "*.vsix"

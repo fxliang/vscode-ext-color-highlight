@@ -1,3 +1,5 @@
+const path = require('path');
+
 const baseConfig = {
   entry: './src/main.js',
   externals: {
@@ -24,6 +26,7 @@ const nodeConfig = {
   ...baseConfig,
   target: 'node',
   output: {
+    path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'commonjs2',
     filename: 'extension-node.js',
     devtoolModuleFilenameTemplate: '[absolute-resource-path]'
@@ -34,6 +37,7 @@ const webConfig = {
   ...baseConfig,
   target: 'webworker',
   output: {
+    path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'commonjs2',
     filename: 'extension-web.js',
     devtoolModuleFilenameTemplate: '[absolute-resource-path]'

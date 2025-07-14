@@ -2,7 +2,7 @@
   "name": "color-highlight-fork-fork",
   "displayName": "Color Highlight",
   "description": "Highlight web colors in your editor",
-  "version": "2.6.1",
+  "version": "2.6.2",
   "publisher": "fxliang",
   "license": "GPL-3.0",
   "engines": {
@@ -41,24 +41,24 @@
       "properties": {
         "color-highlight.enable": {
           "default": true,
-          "description": "Controls if plugin is enabled",
+          "description": "%color-highlight.enable%",
           "type": "boolean"
         },
         "color-highlight.languages": {
           "default": [
             "*"
           ],
-          "description": "An array of language ids which should be highlighted by Color Highlight. \"*\" to trigger on any language; Prepend language id with \"!\" to exclude the language (i.e \"!typescript\", \"!javascript\")",
+          "description": "%color-highlight.languages%",
           "type": "array"
         },
         "color-highlight.matchWords": {
           "default": false,
-          "description": "Highlight color words in all files (grey, green, etc.)",
+          "description": "%color-highlight.matchWords%",
           "type": "boolean"
         },
         "color-highlight.colorFormat": {
           "default": "RGBA",
-          "description": "Highlight HEX values format",
+          "description": "%color-highlight.colorFormat%",
           "type": "string",
           "enum": [
             "RGBA",
@@ -68,19 +68,19 @@
         },
         "color-highlight.matchRgbWithNoFunction": {
           "default": false,
-          "description": "Highlight rgb without functions like rgb() ('255, 255, 255', [255, 255, 255], '255 255 255', etc.)",
+          "description": "%color-highlight.matchRgbWithNoFunction%",
           "type": "boolean"
         },
         "color-highlight.rgbWithNoFunctionLanguages": {
           "default": [
             "*"
           ],
-          "description": "An array of language ids which should be highlighted by Color Highlight with the rgbWithNoFunction pattern. \"*\" to trigger on any language; Prepend language id with \"!\" to exclude the language (i.e \"!typescript\", \"!javascript\")",
+          "description": "%color-highlight.rgbWithNoFunctionLanguages%",
           "type": "array"
         },
         "color-highlight.markerType": {
           "default": "background",
-          "description": "Style of the highlight. Can be 'dot-before', 'dot-after', 'foreground', 'background', 'outline', 'underline'",
+          "description": "%color-highlight.markerType%",
           "type": "string",
           "enum": [
             "dot-before",
@@ -93,12 +93,12 @@
         },
         "color-highlight.markRuler": {
           "default": true,
-          "description": "Highlight colors on the ruler (scroll bar), true/false",
+          "description": "%color-highlight.markRuler%",
           "type": "boolean"
         },
         "color-highlight.sass.includePaths": {
           "default": [],
-          "description": "Array of absolute paths to search while perform file lookups.",
+          "description": "%color-highlight.sass.includePaths%",
           "type": "array"
         }
       }

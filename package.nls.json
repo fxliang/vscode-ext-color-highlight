@@ -1,0 +1,11 @@
+{
+  "color-highlight.enable": "Enable color highlighting",
+  "color-highlight.languages": "Languages to highlight (use \"*\" for all, \"!lang\" to exclude)",
+  "color-highlight.matchWords": "Highlight color names (e.g., 'red', 'blue')",
+  "color-highlight.markerType": "Highlight style",
+  "color-highlight.markRuler": "Show colors in scrollbar",
+  "color-highlight.colorFormat": "HEX color format",
+  "color-highlight.matchRgbWithNoFunction": "Highlight raw RGB values (without rgb())",
+  "color-highlight.rgbWithNoFunctionLanguages": "Languages for raw RGB highlighting",
+  "color-highlight.sass.includePaths": "Sass include paths"
+}
