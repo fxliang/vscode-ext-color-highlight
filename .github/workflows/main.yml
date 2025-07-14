@@ -6,6 +6,9 @@ on:
       - '**'
   workflow_dispatch:
 
+permissions:
+  contents: write
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,3 +32,24 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           path: "*.vsix"
+
+      - name: Create latest release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: 'preview'
+          release_name: 'Preview Release'
+          draft: false
+          prerelease: true
+          files: "*.vsix"
+          body: |
+            自动构建的预览版本
+            
+            安装方法：
+            1. 下载 .vsix 文件
+            2. 在 VS Code 中使用 `Extensions: Install from VSIX` 命令安装
+            
+            构建时间: ${{ github.event.head_commit.timestamp }}
+            提交哈希: ${{ github.sha }}
+          overwrite: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
